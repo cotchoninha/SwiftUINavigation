@@ -26,7 +26,7 @@ extension View {
         }
     }
 
-    private func navigation<Destination: View>(
+    func navigation<Destination: View>(
         isActive: Binding<Bool>,
         @ViewBuilder destination: () -> Destination
     ) -> some View {

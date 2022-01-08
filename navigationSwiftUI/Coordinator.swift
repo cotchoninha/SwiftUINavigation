@@ -11,7 +11,11 @@ class Coordinator: ObservableObject, Identifiable {
     
     @Published var firstViewModel: FirstVM!
     @Published var secondViewModel: SecondVM?
-    @Published var secondDetailsViewModel: SecondVM?
+    @Published var secondDetailsViewModel: SecondVM? {
+        didSet {
+            print("secondDetailsViewModel", secondDetailsViewModel)
+        }
+    }
     @Published var thirdViewModel: ThirdVM?
     @Published var fourthViewModel: FourthVM?
     @Published var fourthDetailsVM: FourthVM?
@@ -20,6 +24,7 @@ class Coordinator: ObservableObject, Identifiable {
 
     init() {
         self.firstViewModel = FirstVM(coordinator: self)
+        print("Coordinator init called")
     }
     
     func openFirstView() {
@@ -54,15 +59,14 @@ class Coordinator: ObservableObject, Identifiable {
         fifthDetailsViewModel = FifthVM(coordinator: self)
     }
     
-    func backRootAndOpenSecondDetailsView() {
+    func backToRoot() {
         fifthDetailsViewModel = nil
         fourthDetailsVM = nil
         thirdViewModel = nil
         secondViewModel = nil
-        openSecondDetailsView()
     }
     
-    func navigateToSecondView() {
+    func backToSecondView() {
         fifthViewModel = nil
         fourthViewModel = nil
         thirdViewModel = nil

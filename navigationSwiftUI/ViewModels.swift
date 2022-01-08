@@ -87,11 +87,11 @@ class FifthVM: ObservableObject, Identifiable {
         self.coordinator = coordinator
     }
     
-    func navigateToSecondView() {
-        coordinator?.navigateToSecondView()
+    func backToSecondView() {
+        coordinator?.backToSecondView()
     }
     
-    func backRootAndOpenSecondDetailsView() {
-        coordinator?.backRootAndOpenSecondDetailsView()
+    func backToRoot() {
+        coordinator?.backToRoot()
     }
 }

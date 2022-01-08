@@ -116,7 +116,7 @@ struct FifthView: View {
     
     var body: some View {
         Button {
-            fifthVM.navigateToSecondView()
+            fifthVM.backToSecondView()
         } label: {
             Text("Go back to second view")
         }
@@ -130,11 +130,20 @@ struct FifthDetailsView: View {
     
     var body: some View {
         Button {
-            fifthVM.backRootAndOpenSecondDetailsView()
+            fifthVM.backToRoot()
         } label: {
-            Text("Back to root and open to second view")
+            Text("Back to root")
         }
         .navigationTitle("Fifth Details View")
     }
 }
 
+
+// Workaround for views being randomly popped https://forums.swift.org/t/14-5-beta3-navigationlink-unexpected-pop/45279
+struct EmptyContainer: View {
+    var body: some View {
+        NavigationLink(destination: EmptyView()) {
+            EmptyView()
+        }
+    }
+}

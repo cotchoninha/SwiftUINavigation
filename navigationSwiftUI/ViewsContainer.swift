@@ -15,11 +15,13 @@ struct ViewsContainer: View {
         
         NavigationView {
             
+            Group {
+            
             FirstView(firstvm: coordinator.firstViewModel)
             
                 .navigation(item: $coordinator.secondViewModel) {
                     SecondView(secondVM: $0)
-                    
+
                         .navigation(item: $coordinator.thirdViewModel) {
                             ThirdView(thirdVM: $0)
                             
@@ -38,6 +40,11 @@ struct ViewsContainer: View {
                                             FifthDetailsView(fifthVM: $0)
                                         }
                                 }
+                            
+                            
+                                .navigation(isActive: .constant(false)) {
+                                    EmptyContainer()
+                                }
                         }
                 }
             
@@ -45,6 +52,12 @@ struct ViewsContainer: View {
                     SecondDetailsView(secondVM: $0)
                 }
             
-        }.navigationViewStyle(StackNavigationViewStyle())
+                .navigation(isActive: .constant(false)) {
+                    EmptyContainer()
+                }
+                
+            }
+            
+        }.navigationViewStyle(.stack)
     }
 }
