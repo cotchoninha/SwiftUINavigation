@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		182CC1C22784E7A600DD802A /* navigationSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CC1C12784E7A600DD802A /* navigationSwiftUIApp.swift */; };
-		182CC1C42784E7A600DD802A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CC1C32784E7A600DD802A /* ContentView.swift */; };
+		182CC1C42784E7A600DD802A /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CC1C32784E7A600DD802A /* Views.swift */; };
 		182CC1C62784E7A700DD802A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182CC1C52784E7A700DD802A /* Assets.xcassets */; };
 		182CC1C92784E7A700DD802A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182CC1C82784E7A700DD802A /* Preview Assets.xcassets */; };
+		182CC1D02784E7D300DD802A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CC1CF2784E7D300DD802A /* Extensions.swift */; };
+		182CC1D22784E83100DD802A /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CC1D12784E83100DD802A /* ViewModels.swift */; };
+		182CC1D42784E84A00DD802A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CC1D32784E84A00DD802A /* Coordinator.swift */; };
+		182CC1D62784E8D200DD802A /* ViewsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CC1D52784E8D200DD802A /* ViewsContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		182CC1BE2784E7A600DD802A /* navigationSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = navigationSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182CC1C12784E7A600DD802A /* navigationSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationSwiftUIApp.swift; sourceTree = "<group>"; };
-		182CC1C32784E7A600DD802A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		182CC1C32784E7A600DD802A /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		182CC1C52784E7A700DD802A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182CC1C82784E7A700DD802A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		182CC1CF2784E7D300DD802A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		182CC1D12784E83100DD802A /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
+		182CC1D32784E84A00DD802A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		182CC1D52784E8D200DD802A /* ViewsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				182CC1C12784E7A600DD802A /* navigationSwiftUIApp.swift */,
-				182CC1C32784E7A600DD802A /* ContentView.swift */,
+				182CC1D32784E84A00DD802A /* Coordinator.swift */,
+				182CC1D52784E8D200DD802A /* ViewsContainer.swift */,
+				182CC1C32784E7A600DD802A /* Views.swift */,
+				182CC1D12784E83100DD802A /* ViewModels.swift */,
+				182CC1CF2784E7D300DD802A /* Extensions.swift */,
 				182CC1C52784E7A700DD802A /* Assets.xcassets */,
 				182CC1C72784E7A700DD802A /* Preview Content */,
 			);
@@ -137,7 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182CC1C42784E7A600DD802A /* ContentView.swift in Sources */,
+				182CC1D62784E8D200DD802A /* ViewsContainer.swift in Sources */,
+				182CC1C42784E7A600DD802A /* Views.swift in Sources */,
+				182CC1D02784E7D300DD802A /* Extensions.swift in Sources */,
+				182CC1D42784E84A00DD802A /* Coordinator.swift in Sources */,
+				182CC1D22784E83100DD802A /* ViewModels.swift in Sources */,
 				182CC1C22784E7A600DD802A /* navigationSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"navigationSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = M7ZBSHCGRM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -298,6 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"navigationSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = M7ZBSHCGRM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
