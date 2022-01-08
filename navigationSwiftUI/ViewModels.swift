@@ -11,14 +11,18 @@ class FirstVM: ObservableObject, Identifiable {
     
     var text = "FirstVM"
     
-    var coordinator: Coordinator
+    private weak var coordinator: Coordinator?
     
     init(coordinator: Coordinator) {
         self.coordinator = coordinator
     }
     
     func openSecondView() {
-        coordinator.openSecondView()
+        coordinator?.openSecondView()
+    }
+    
+    func openSecondDetailsView() {
+        coordinator?.openSecondDetailsView()
     }
 }
 
@@ -27,59 +31,67 @@ class FirstVM: ObservableObject, Identifiable {
 class SecondVM: ObservableObject, Identifiable {
     
     var text = "SecondVM"
-    var coordinator: Coordinator
+    private weak var coordinator: Coordinator?
     
     init(coordinator: Coordinator) {
         self.coordinator = coordinator
     }
     
     func openThirdView() {
-        coordinator.openThirdView()
+        coordinator?.openThirdView()
     }
 }
 
 class ThirdVM: ObservableObject, Identifiable {
     
     var text = "ThirdVM"
-    var coordinator: Coordinator
+    private weak var coordinator: Coordinator?
     
     init(coordinator: Coordinator) {
         self.coordinator = coordinator
     }
     
     func openFourthView() {
-        coordinator.openFourthView()
+        coordinator?.openFourthView()
+    }
+    
+    func openFourthViewDetails() {
+        coordinator?.openFourthViewDetails()
     }
 }
 
 class FourthVM: ObservableObject, Identifiable {
     
     var text = "ThirdVM"
-    var coordinator: Coordinator
+    private weak var coordinator: Coordinator?
     
     init(coordinator: Coordinator) {
         self.coordinator = coordinator
     }
     
     func openFifthView() {
-        coordinator.openFifthView()
+        coordinator?.openFifthView()
     }
     
-    func openFourthViewDetails() {
-        coordinator.openFourthViewDetails()
+    func openFifthDetailView() {
+        coordinator?.openFifthDetailView()
     }
 }
 
 class FifthVM: ObservableObject, Identifiable {
     
     var text = "ThirdVM"
-    var coordinator: Coordinator
+    private weak var coordinator: Coordinator?
     
     init(coordinator: Coordinator) {
         self.coordinator = coordinator
     }
     
     func navigateToSecondView() {
-        coordinator.navigateToSecondView()
+        coordinator?.navigateToSecondView()
+    }
+    
+    func backRootAndOpenSecondDetailsView() {
+        coordinator?.backRootAndOpenSecondDetailsView()
     }
 }

@@ -11,10 +11,12 @@ class Coordinator: ObservableObject, Identifiable {
     
     @Published var firstViewModel: FirstVM!
     @Published var secondViewModel: SecondVM?
+    @Published var secondDetailsViewModel: SecondVM?
     @Published var thirdViewModel: ThirdVM?
     @Published var fourthViewModel: FourthVM?
-    @Published var fifthViewModel: FifthVM?
     @Published var fourthDetailsVM: FourthVM?
+    @Published var fifthViewModel: FifthVM?
+    @Published var fifthDetailsViewModel: FifthVM?
 
     init() {
         self.firstViewModel = FirstVM(coordinator: self)
@@ -26,6 +28,10 @@ class Coordinator: ObservableObject, Identifiable {
 
     func openSecondView() {
         secondViewModel = SecondVM(coordinator: self)
+    }
+    
+    func openSecondDetailsView() {
+        secondDetailsViewModel = SecondVM(coordinator: self)
     }
     
     func openThirdView() {
@@ -42,6 +48,18 @@ class Coordinator: ObservableObject, Identifiable {
     
     func openFifthView() {
         fifthViewModel = FifthVM(coordinator: self)
+    }
+    
+    func openFifthDetailView() {
+        fifthDetailsViewModel = FifthVM(coordinator: self)
+    }
+    
+    func backRootAndOpenSecondDetailsView() {
+        fifthDetailsViewModel = nil
+        fourthDetailsVM = nil
+        thirdViewModel = nil
+        secondViewModel = nil
+        openSecondDetailsView()
     }
     
     func navigateToSecondView() {

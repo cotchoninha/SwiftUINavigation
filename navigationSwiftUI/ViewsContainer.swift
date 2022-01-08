@@ -30,8 +30,21 @@ struct ViewsContainer: View {
                                             FifthView(fifthVM: $0)
                                         }
                                 }
+                            
+                                .navigation(item: $coordinator.fourthDetailsVM) {
+                                    FourthDetailsView(fourthVM: $0)
+                                    
+                                        .navigation(item: $coordinator.fifthDetailsViewModel) {
+                                            FifthDetailsView(fifthVM: $0)
+                                        }
+                                }
                         }
                 }
+            
+                .navigation(item: $coordinator.secondDetailsViewModel) {
+                    SecondDetailsView(secondVM: $0)
+                }
+            
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
