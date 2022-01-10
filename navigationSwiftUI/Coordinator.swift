@@ -11,11 +11,7 @@ class Coordinator: ObservableObject, Identifiable {
     
     @Published var firstViewModel: FirstVM!
     @Published var secondViewModel: SecondVM?
-    @Published var secondDetailsViewModel: SecondVM? {
-        didSet {
-            print("secondDetailsViewModel", secondDetailsViewModel)
-        }
-    }
+    @Published var secondDetailsViewModel: SecondVM?
     @Published var thirdViewModel: ThirdVM?
     @Published var fourthViewModel: FourthVM?
     @Published var fourthDetailsVM: FourthVM?

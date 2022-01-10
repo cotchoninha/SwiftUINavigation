@@ -5,6 +5,8 @@
 //  Created by Marcela Auslenter on 04/01/2022.
 //
 
+// Extracted from https://quickbirdstudios.com/blog/coordinator-pattern-in-swiftui/
+
 import SwiftUI
 
 extension View {

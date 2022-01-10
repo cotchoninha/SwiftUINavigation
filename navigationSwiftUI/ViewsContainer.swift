@@ -58,6 +58,7 @@ struct ViewsContainer: View {
                 
             }
             
-        }.navigationViewStyle(.stack)
+        }
+        .navigationViewStyle(.stack)
     }
 }
